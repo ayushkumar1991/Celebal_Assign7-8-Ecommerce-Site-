@@ -1,185 +1,308 @@
-🛒 MERN E-Commerce Site:-
-An end-to-end e-commerce platform built using the MERN stack. This project supports secure authentication, product management, image uploads via Cloudinary, PayPal integration, and a mobile-friendly React storefront.
+🛒 MERN E-commerce Platform
+<p align="center"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" /> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" /> <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal" /> <img src="https://img.shields.io/badge/Cloudinary-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Cloudinary" /> </p> <p align="center"> A full-featured e-commerce platform built with the MERN stack, featuring secure authentication, payment integration, and admin panel for complete store management. </p> <p align="center"> <a href="#-demo">🚀 Live Demo</a> - <a href="#-features">✨ Features</a> - <a href="#-installation">📦 Installation</a> - <a href="#-usage">🎯 Usage</a> - <a href="#-contributing">🤝 Contributing</a> </p>
+🚀 Demo
+Live Demo: [Coming Soon]
 
-✨ Features
-Domain	Highlights
-User Auth	JWT-based authentication, hashed passwords with bcryptjs, cookies via cookie-parser
-Admin Panel	Admin can manage products, users, and orders
-Product Catalog	Pagination, category filtering, search, Cloudinary-hosted images
-Shopping Cart	Add/remove items, update quantity, persistent in localStorage
-Payments	PayPal integration (sandbox/live switch), email confirmation
-Responsive UI	Built with React and CSS Modules, mobile-optimized
-API	RESTful with Node.js & Express, protected endpoints, validation
-Database	MongoDB (Atlas), schema validation, indexing via Mongoose
-Developer Tools	nodemon, dotenv, ESLint, Prettier, concurrently
+📸 Screenshots
+Home Page	Product Details	Shopping Cart	Admin Dashboard
+![Home](https://via://via.placeholder.com/via.placeholder.com			
+🛍️ Customer Features
+User Authentication - JWT-based secure login/register system
 
-🏗️ Tech Stack
-Layer	Tools / Packages	Notes
-Frontend	React 18, Context API	Hooks, Stateless components, Client routing
-Styling	CSS Modules / SCSS	Clean styling, no runtime cost
-Backend	Express 4	RESTful APIs, middleware
-Auth	bcryptjs, JWT, cookie-parser, cors	Secure auth flow
-Database	MongoDB Atlas, Mongoose 8	ODM, schema enforcement
-Media Storage	Cloudinary v2	Secure uploads, optimized images
-Payments	PayPal REST SDK	Sandbox & live support
-Utilities	nodemon, concurrently, dotenv	Streamlined development
+Product Browsing - Browse products with advanced filtering and search
 
-📂 Project Structure
-pgsql
-Copy
-Edit
-Celebal_Assign7-8-Ecommerce-Site-
-├── client/                # React frontend
-│   ├── public/
-│   └── src/
-│       ├── assets/
-│       ├── components/
-│       ├── context/
-│       ├── pages/
-│       └── utils/
-├── server/                # Express backend
-│   ├── config/            # DB & PayPal config
-│   ├── controllers/
-│   ├── helpers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── uploads/           # Local uploads (temp before Cloudinary)
-│   ├── .env.example
-│   └── server.js
-└── README.md
-🚀 Local Setup
-1. Prerequisites
-Node.js ≥ 18
+Shopping Cart - Add/remove products with quantity management
 
-MongoDB Atlas or local MongoDB instance
+Secure Checkout - Integrated PayPal payment gateway
 
-Cloudinary account (free tier is fine)
+Order Tracking - Real-time order status updates
 
-PayPal developer account
+User Profile - Manage personal information and order history
 
-2. Clone & Install
+Responsive Design - Optimized for desktop, tablet, and mobile
+
+👨‍💼 Admin Features
+Product Management - CRUD operations for products
+
+Order Management - View and update order statuses
+
+User Management - Manage customer accounts
+
+Inventory Control - Track stock levels and manage inventory
+
+Dashboard Analytics - Sales reports and key metrics
+
+Image Upload - Cloudinary integration for product images
+
+🔧 Technical Features
+RESTful API - Well-structured API endpoints
+
+Database Security - MongoDB with Mongoose ODM
+
+File Upload - Multer with Cloudinary storage
+
+Authentication - bcryptjs password hashing
+
+CORS - Cross-origin resource sharing enabled
+
+Environment Configuration - dotenv for secure configuration
+
+🛠️ Tech Stack
+Frontend
+React.js - Component-based UI library
+
+React Router - Client-side routing
+
+Context API - State management
+
+CSS3 - Modern styling with Flexbox/Grid
+
+Responsive Design - Mobile-first approach
+
+Backend
+Node.js - JavaScript runtime environment
+
+Express.js - Web application framework
+
+MongoDB - NoSQL database
+
+Mongoose - MongoDB object modeling
+
+Authentication & Security
+JWT (jsonwebtoken) - Token-based authentication
+
+bcryptjs - Password hashing
+
+cookie-parser - HTTP cookie parsing
+
+CORS - Cross-origin resource sharing
+
+Payment & Storage
+PayPal REST SDK - Payment processing
+
+Cloudinary - Image storage and optimization
+
+Multer - File upload middleware
+
+Development Tools
+nodemon - Development server auto-restart
+
+dotenv - Environment variable management
+
+📦 Installation
+Prerequisites
+Before you begin, ensure you have the following installed:
+
+Node.js (version 14.x or higher)
+
+npm or yarn
+
+MongoDB (local installation or MongoDB Atlas account)
+
+Git
+
+🔧 Setup Instructions
+Clone the repository
+
 bash
-Copy
-Edit
 git clone https://github.com/ayushkumar1991/Celebal_Assign7-8-Ecommerce-Site-.git
 cd Celebal_Assign7-8-Ecommerce-Site-
+Install dependencies
 
-# Install server dependencies
+Backend dependencies:
+
+bash
 cd server
 npm install
+Frontend dependencies:
 
-# Install client dependencies
+bash
 cd ../client
 npm install
-3. Environment Variables
-Copy .env.example to .env in both server/ and client/.
+Environment Configuration
 
-server/.env
+Create .env file in the server directory:
 
-env
-Copy
-Edit
-PORT=5000
-MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.mongodb.net/ecom
-JWT_SECRET=supersecret
+text
+# Database
+MONGO_URI=mongodb://localhost:27017/mern-ecommerce
+# or MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/dbname
+
+# JWT
+JWT_SECRET=your_super_secret_jwt_key_here
+JWT_EXPIRE=30d
+
+# Cookies
 COOKIE_EXPIRE=7
+
+# Cloudinary
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-PAYPAL_MODE=sandbox
-PAYPAL_CLIENT_ID=your_paypal_client_id
-PAYPAL_CLIENT_SECRET=your_paypal_secret
-client/.env
 
-env
-Copy
-Edit
-REACT_APP_API_URL=http://localhost:5000
-4. Run the App (Development)
+# PayPal
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_CLIENT_SECRET=your_paypal_client_secret
+PAYPAL_MODE=sandbox  # or 'live' for production
+
+# Server
+PORT=5000
+NODE_ENV=development
+Start the application
+
+Start backend server (Terminal 1):
+
 bash
-Copy
-Edit
-# Terminal 1 – Backend
 cd server
 npm run dev
+Start frontend server (Terminal 2):
 
-# Terminal 2 – Frontend
+bash
 cd client
 npm start
-Open your browser at: http://localhost:3000
+Access the application
 
-📮 API Overview
-Method	Endpoint	Access	Description
-GET	/api/products	Public	List products with pagination
-POST	/api/users/login	Public	Login user, return JWT cookie
-GET	/api/orders/:id	Private	Get order details
-POST	/api/paypal/create	Private	Initiate PayPal payment
+Frontend: http://localhost:3000
 
-🧪 Full API documentation is included in /server/docs/ (Postman collection).
+Backend API: http://localhost:5000
 
-🖼️ Screenshots
-Home Page	Cart Page	Admin Dashboard
-Add screenshots here	Add screenshots here	Add screenshots here
+🎯 Usage
+For Customers:
+Browse Products - Visit the home page to see featured products
 
-🛠️ Common Commands
-Server (inside /server)
+Search & Filter - Use search bar and category filters
 
+Add to Cart - Click "Add to Cart" on product pages
+
+Checkout - Complete purchase using PayPal
+
+Track Orders - View order status in your profile
+
+For Administrators:
+Access Admin Panel - Login with admin credentials
+
+Manage Products - Add, edit, or delete products
+
+Process Orders - Update order statuses
+
+View Analytics - Check sales reports and metrics
+
+📁 Project Structure
+text
+Celebal_Assign7-8-Ecommerce-Site-/
+├── 📁 client/                    # React frontend
+│   ├── 📁 public/               # Public assets
+│   └── 📁 src/                  # Source code
+│       ├── 📁 components/       # Reusable components
+│       ├── 📁 pages/           # Page components
+│       ├── 📁 context/         # Context providers
+│       └── 📁 utils/           # Utility functions
+├── 📁 server/                   # Node.js backend
+│   ├── 📁 config/              # Configuration files
+│   ├── 📁 controllers/         # Route controllers
+│   ├── 📁 middleware/          # Custom middleware
+│   ├── 📁 models/              # Mongoose models
+│   ├── 📁 routes/              # API routes
+│   ├── 📁 helpers/             # Helper functions
+│   └── server.js               # Entry point
+├── 📄 README.md
+└── 📄 .gitignore
+🚀 API Endpoints
+Authentication
+POST /api/users/register - Register new user
+
+POST /api/users/login - User login
+
+POST /api/users/logout - User logout
+
+GET /api/users/profile - Get user profile
+
+Products
+GET /api/products - Get all products
+
+GET /api/products/:id - Get product by ID
+
+POST /api/products - Create product (Admin)
+
+PUT /api/products/:id - Update product (Admin)
+
+DELETE /api/products/:id - Delete product (Admin)
+
+Orders
+POST /api/orders - Create new order
+
+GET /api/orders - Get user orders
+
+GET /api/orders/:id - Get order by ID
+
+PUT /api/orders/:id/pay - Update order payment
+
+PayPal
+POST /api/paypal/create-payment - Create PayPal payment
+
+POST /api/paypal/execute-payment - Execute PayPal payment
+
+🧪 Testing
 bash
-Copy
-Edit
-npm run dev         # Start dev server (nodemon)
-npm start           # Start prod server
-npm run data:import # Seed sample data
-npm run data:destroy# Clear all DB data
-Client (inside /client)
+# Run backend tests
+cd server
+npm test
 
-bash
-Copy
-Edit
-npm start           # Start React dev server
-npm run build       # Build for production
-🌍 Deployment Guide
-Backend – Render
-Set environment variables in Dashboard → Environment
+# Run frontend tests
+cd client
+npm test
+🚀 Deployment
+Backend Deployment (Railway/Render)
+Create account on Railway or Render
 
-Deploy from /server directory
+Connect your GitHub repository
 
-Frontend – Vercel or Netlify
-Run npm run build
+Set environment variables in dashboard
 
-Upload build/ folder
+Deploy from server directory
 
-Set REACT_APP_API_URL to your backend URL
+Frontend Deployment (Vercel/Netlify)
+Build the project: npm run build
 
-Custom Domain
-Point your domain's A-record or CNAME to Vercel / Netlify / Render as needed.
+Deploy the build folder
+
+Set REACT_APP_API_URL environment variable
 
 🤝 Contributing
-Fork this repo
+We welcome contributions! Please follow these steps:
 
-Create your feature branch:
+Fork the repository
 
-bash
-Copy
-Edit
-git checkout -b feature/your-feature
-Commit changes:
+Create feature branch: git checkout -b feature/amazing-feature
 
-bash
-Copy
-Edit
-git commit -m "Add your feature"
-Push and create a Pull Request
+Commit changes: git commit -m 'Add amazing feature'
 
-PRs should pass ESLint and unit tests (coming soon).
+Push to branch: git push origin feature/amazing-feature
 
-📜 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+Open Pull Request
 
-📫 Contact
-Ayush Kumar
+Contribution Guidelines
+Follow existing code style
 
-GitHub: @ayushkumar1991
+Add tests for new features
 
-Email: ayushkumr1991@gmail.com
+Update documentation
+
+Ensure all tests pass
+
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+React.js for the amazing frontend framework
+
+Express.js for the robust backend framework
+
+MongoDB for the flexible database solution
+
+PayPal for payment processing
+
+Cloudinary for image management
+
+📞 Contact & Support
+<p align="center"> <strong>👨‍💻 Developed by Ayush Kumar</strong> </p> <p align="center"> <a href="https://github.com/ayushkumar1991"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /> </a> <a href="mailto:ayushkumr1991@gmail.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /> </a> <a href="https://www.linkedin.com/in/ayush-kumar-607444242/"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /> </a> </p> <p align="center"> <strong>⭐ Star this repository if you found it helpful!</strong> </p> <p align="center"> Made with ❤️ and ☕ by <a href="https://github.com/ayushkumar1991">Ayush Kumar</a> </p>

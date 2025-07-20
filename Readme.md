@@ -25,11 +25,6 @@
 
 **Live Demo:** [Coming Soon]
 
-### 📸 Screenshots
-
-| Home Page | Product Details | Shopping Cart | Admin Dashboard |
-|-----------|----------------|---------------|-----------------|
-|  |  |  |  |
 
 ## ✨ Features
 
@@ -176,26 +171,29 @@ npm start
 3. **Process Orders** - Update order statuses
 4. **View Analytics** - Check sales reports and metrics
 
-## 📁 Project Structure
-
+### **📁 Project Structure:**
 Celebal_Assign7-8-Ecommerce-Site-/
-├── 📁 client/ # React frontend
-│ ├── 📁 public/ # Public assets
-│ └── 📁 src/ # Source code
-│ ├── 📁 components/ # Reusable components
-│ ├── 📁 pages/ # Page components
-│ ├── 📁 context/ # Context providers
-│ └── 📁 utils/ # Utility functions
-├── 📁 server/ # Node.js backend
-│ ├── 📁 config/ # Configuration files
-│ ├── 📁 controllers/ # Route controllers
-│ ├── 📁 middleware/ # Custom middleware
-│ ├── 📁 models/ # Mongoose models
-│ ├── 📁 routes/ # API routes
-│ ├── 📁 helpers/ # Helper functions
-│ └── server.js # Entry point
-├── 📄 README.md
-└── 📄 .gitignore
+├── client/                    # React frontend
+│   ├── public/                # Public assets (index.html, favicon, etc.)
+│   └── src/                   # Application source code
+│       ├── assets/            # Images, fonts, icons
+│       ├── components/        # Reusable UI components
+│       ├── context/           # React context providers
+│       ├── pages/             # Route/page components
+│       ├── styles/            # Global and module CSS files
+│       └── utils/             # Helper functions and constants
+├── server/                    # Node.js backend
+│   ├── config/                # Configuration (DB, PayPal, Cloudinary)
+│   ├── controllers/           # Route handler logic
+│   ├── helpers/               # Utility functions (e.g., error handling)
+│   ├── middleware/            # Express middleware
+│   ├── models/                # Mongoose schemas and models
+│   ├── routes/                # API route definitions
+│   ├── uploads/               # Temporary file uploads (before Cloudinary)
+│   └── server.js              # Server entry point
+├── .gitignore                 # Files and folders to ignore in Git
+└── README.md                  # Project overview and documentation
+
 
 
 ## 🚀 API Endpoints
